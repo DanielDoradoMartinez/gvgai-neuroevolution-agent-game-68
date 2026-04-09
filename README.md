@@ -1,59 +1,62 @@
-# GVGAI Neuroevolution Agent Game 68
+# GVGAI Neuroevolution Agent (Game 68)
 
-Este proyecto implementa un agente para el framework **GVGAI (General Video Game AI)** utilizando **neuroevolución** para aprender a jugar a juegos tipo laberinto (similar a Pacman).
+This project implements an agent for the **GVGAI (General Video Game AI)** framework using **neuroevolution** to learn how to play maze-based games (similar to Pacman).
 
-⚠️ **Importante:** Este repositorio solo contiene el código del agente.  
-Para ejecutarlo es necesario instalar previamente el framework GVGAI.
-
----
-
-## 🧠 Idea general
-
-El agente utiliza una red neuronal cuyos pesos se optimizan mediante un algoritmo evolutivo.
-
-- La red recibe información del entorno (mapa, enemigos, comida, etc.)
-- Devuelve una acción del juego
-- Los individuos se evalúan jugando partidas
-- Se seleccionan y evolucionan los mejores
+⚠️ **Important:** This repository only contains the agent code.  
+To run it, you must first install the GVGAI framework.
 
 ---
 
-## 📦 Estructura
+## 🧠 Overview
 
-El repositorio incluye únicamente las clases del agente:
+The agent uses a neural network whose weights are optimized through an evolutionary algorithm.
 
-- `Agente.java` → interfaz con GVGAI
-- `Brain.java` → red neuronal y decisión de acciones
-- `Map.java` → representación del entorno
-- `Evaluator.java` → cálculo de fitness
-- `Evolution.java` → algoritmo evolutivo
-- `TrainMain.java` → entrenamiento
-- `Testing.java` → uso del agente
+- The network receives information about the environment (map, enemies, food, etc.)
+- It outputs an action
+- Individuals are evaluated by playing the game
+- The best individuals are selected and evolved over generations
+
+---
+
+## 📦 Structure
+
+This repository only includes the agent classes:
+
+- `Agente.java` → interface with GVGAI
+- `Brain.java` → neural network and decision logic
+- `Map.java` → internal representation of the environment
+- `Evaluator.java` → fitness calculation
+- `Evolution.java` → evolutionary algorithm
+- `TrainMain.java` → training entry point
+- `Testing.java` → agent execution
 - `GameFactory.java`
 - `Individual.java`
 - `Scenario.java`
 
 ---
 
-## ⚙️ Requisitos
+## ⚙️ Requirements
 
-Necesitas tener instalado GVGAI:
+You need to install GVGAI:
 
-- Descargar el framework desde su repositorio oficial
-- Importarlo como proyecto Java (por ejemplo en Eclipse o IntelliJ)
+- Download the framework from its official repository
+- Import it as a Java project (e.g. in Eclipse or IntelliJ)
 
-Este código está pensado para ejecutarse **dentro del proyecto GVGAI**, no como proyecto independiente.
+This code is designed to run **inside the GVGAI project**, not as a standalone application.
 
 ---
 
-## 🚀 Cómo usarlo
+## 🚀 How to use
 
-1. Descarga el framework GVGAI
-2. Copia la carpeta `miAgente` dentro del proyecto (por ejemplo en `src/`)
-3. Asegúrate de que el proyecto compila correctamente
+1. Download the GVGAI framework  
+2. Copy the `miAgente` folder into the project (e.g. inside `src/`)  
+3. Make sure the project compiles correctly  
 
-### Entrenamiento
+---
 
-Ejecuta:
+## 🏋️ Training
 
+Run:
+
+```bash
 TrainMain.java
